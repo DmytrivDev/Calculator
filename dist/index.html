@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="assets/css/vendor.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
+</head>
+<body>
+<div class="page-wrapper" id="pageWrapper">
+
+
+  
+
+<div class="calccont flex">
+  <div class="calcinn">
+    <form>
+      <input type="number" class="calc1" value="16">
+      <input type="number" class="calc2">
+      <a href="#" onclick="calc()" class="button">Рахувати</a>
+      <div class="res"></div>
+    </form>
+  </div>
+</div>
+
+<script>
+  function calc() {
+      event.preventDefault();
+
+      var
+          c1 = $('.calc1').val(),
+          c2 = $('.calc2').val(),
+          res = 100 / c1 * c2 / 100,
+          fixed = res.toFixed(3),
+          resf = fixed +'em';
+
+      $('.res').text(resf);
+  }
+</script>
+
+<style>
+  .calccont {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #020E43;
+  }
+  .calcinn {
+    width: 220px;
+  }
+  input {
+    margin-bottom: 20px;
+    height: 30px;
+    padding: 0. 15px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+  }
+  .button {
+    width: 120px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .res {
+    margin-top: 30px;
+    font-size: 24px;
+    line-height: 1;
+    height: 24px;
+    color: #fff;
+    text-align: center;
+  }
+</style>
+
+</div>
+
+<script src="assets/js/vendor.min.js"></script>
+<script src="assets/js/custom.min.js"></script>
+</body>
+</html>
